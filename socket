@@ -1,0 +1,20 @@
+from flask import flask
+from flask_socketio import SocketIO,send
+
+app=Flak(--name--)
+socketio=SocketIO(app)
+application=socketio
+application.connect(('localhost',5000))
+name=input("Enter your name")
+application.send(bytes(name,'utf-8'))
+print(application.recv(1024).decode())
+from flask_socketio import SocketIO,send
+server=socket.socket()
+print("socket is created")
+server.bind(('localhost',5000))
+server.listen(100)
+print("waiting for connections")
+while true:
+	application,address=server.accept()
+	name=application.recv(1024).decode()
+	print("connected with ",address,name)
